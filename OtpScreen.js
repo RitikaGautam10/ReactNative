@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component,useRef, useState } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -9,7 +9,8 @@ import {
   TextInput,
   TouchableOpacity,
   ImageBackground,
-  Image
+  Image,
+  Button
 } from 'react-native';
 
 import {
@@ -20,94 +21,50 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-class OtpScreen extends Component {
-  constructor(props){
-    super(props)
-    this.state={
-      pin1:"",
-      pin2:"",
-      pin3:"",
-      pin4:""
+const OtpScreen: () => React$Node = () => {
+  const [otp, setOtp] = useState(new Array(4).fill(""));
+    var num1 = useRef()
+    var num2 = useRef()
+    var num3 = useRef()
+    var num4 = useRef()
+    var Otp1Focus = ()=>{
+    num2.current.focus();
     }
-  }
-  componentDidMount=()=>{
-    this.refs.pin1ref.focus()
-  }
-  render(){
-    const {pin1,pin2,pin3,pin4}=this.state
-    return (
-      
-      <>
-      <SafeAreaView/>
-        <View style={styles.container}>
-          <View style={styles.header}>
+  
+    var Otp2Focus = ()=>{
+    num3.current.focus();
+    }
+    var Otp3Focus = ()=>{
+    num4.current.focus();
+    }
+   var Otp4Focus= ()=>{
+    
+    }
+    return(
+      <View style={styles.container}>
+         <View style={styles.header}>
               <Text style={styles.headertxt}>Log into Saavn</Text>
           </View>
           <ImageBackground style={styles.image} source={require('./Images/otpimage.png')} style={styles.image}>
           <View style={styles.txtcontainer}>
-            <Text style={styles.Text} >Enter your code</Text>
-          </View>
+             <Text style={styles.Text} >Enter your code</Text>
+           </View>
           <View style={styles.otpContainer}>
-            <TextInput  
-            ref={"pin1ref"} 
-            maxLength={1} 
-            style={styles.otp}
-            onChangeText={(pin1)=>{
-              this.setState({pin1:pin1})
-              if(pin1!=""){
-                this.refs.pin2ref.focus()
-              }
-            }
-              }
-            value={pin1}/>
-
-            <TextInput  
-            ref={"pin2ref"} 
-            maxLength={1} 
-            style={styles.otp}
-            onChangeText={(pin2)=>{
-              this.setState({pin2:pin2})
-              if(pin2!=""){
-                this.refs.pin3ref.focus()
-              }
-            }}
-            value={pin2}/>
-
-            <TextInput  
-            ref={"pin3ref"} 
-            maxLength={1} 
-            style={styles.otp}
-            onChangeText={(pin3)=>{
-              this.setState({pin3:pin3})
-              if(pin3!=""){
-                this.refs.pin4ref.focus()
-              }
-            }}
-            value={pin3}/>
-
-            <TextInput  
-            ref={"pin4ref"} 
-            maxLength={1} 
-            style={styles.otp}
-            onChangeText={(pin4)=>{
-              this.setState({pin4:pin4})
-             
-            }}
-            value={pin4}/>
-            
-          </View>
-          <View style={styles.btnContainer}>
-            <TouchableOpacity  style={styles.button}>
-              <Text style={styles.buttontxt}>Continue</Text>
-            </TouchableOpacity>
-          </View>
-          </ImageBackground>
-          </View>
-     </>
-    );
-  }
-  
-};
+      <TextInput keyboardType={'numeric'} style={styles.otp} maxLength={1}  onChange={()=>Otp1Focus()} ref={num1}/>
+      <TextInput keyboardType={'numeric'} style={styles.otp} maxLength={1} onChange={()=>Otp2Focus()} ref={num2}/>
+      <TextInput keyboardType={'numeric'} style={styles.otp} maxLength={1}  onChange={()=>Otp3Focus()} ref={num3}/>
+      <TextInput keyboardType={'numeric'} style={styles.otp} maxLength={1} onChange={()=>Otp4Focus()} ref={num4}/>
+      </View>
+      <View style={styles.btnContainer}>
+             <TouchableOpacity onPress={()=>alert('otp generated')} style={styles.button}>
+               <Text style={styles.buttontxt}>Continue</Text>
+             </TouchableOpacity>
+           </View>
+      </ImageBackground>
+      </View>
+      )
+      
+    };
 
 const styles = StyleSheet.create({
   container:{
@@ -128,7 +85,7 @@ const styles = StyleSheet.create({
 
  },
  Text:{
-   fontSize:20,
+   fontSize:30,
    padding:40,
    margin:20
  },
