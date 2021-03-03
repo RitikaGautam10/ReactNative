@@ -6,7 +6,7 @@ Ques1: Create the screen with design given in the link below alongwith backgroun
 Solution : Otpscreen.js
 </div>
 
-![otpscreen](./Screenshots/otpscreen.png)
+![otpscreen1](./Screenshots/otpscreen1.png)
 
 <div>
 Ques 2: Create a text input , text and view alongwith the following steps:-
