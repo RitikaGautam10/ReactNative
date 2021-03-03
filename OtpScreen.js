@@ -50,10 +50,10 @@ const OtpScreen: () => React$Node = () => {
              <Text style={styles.Text} >Enter your code</Text>
            </View>
           <View style={styles.otpContainer}>
-      <TextInput keyboardType={'numeric'} style={styles.otp} maxLength={1}  onChange={()=>Otp1Focus()} ref={num1}/>
-      <TextInput keyboardType={'numeric'} style={styles.otp} maxLength={1} onChange={()=>Otp2Focus()} ref={num2}/>
-      <TextInput keyboardType={'numeric'} style={styles.otp} maxLength={1}  onChange={()=>Otp3Focus()} ref={num3}/>
-      <TextInput keyboardType={'numeric'} style={styles.otp} maxLength={1} onChange={()=>Otp4Focus()} ref={num4}/>
+      <TextInput keyboardType={'number-pad'} style={styles.otp} maxLength={1}  onChange={()=>Otp1Focus()} ref={num1}/>
+      <TextInput keyboardType={'number-pad'} style={styles.otp} maxLength={1} onChange={()=>Otp2Focus()} ref={num2}/>
+      <TextInput keyboardType={'number-pad'} style={styles.otp} maxLength={1}  onChange={()=>Otp3Focus()} ref={num3}/>
+      <TextInput keyboardType={'number-pad'} style={styles.otp} maxLength={1} onChange={()=>Otp4Focus()} ref={num4}/>
       </View>
       <View style={styles.btnContainer}>
              <TouchableOpacity onPress={()=>alert('otp generated')} style={styles.button}>
