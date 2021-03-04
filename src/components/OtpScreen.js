@@ -22,41 +22,51 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 const OtpScreen: () => React$Node = () => {
-  const [otp, setOtp] = useState(new Array(4).fill(""));
-    var num1 = useRef()
+   const [otp1,otpset1]=useState('')
+   const [otp2,otpset2]=useState('')
+   const [otp3,otpset3]=useState('')
+   const [otp4,otpset4]=useState('')
+   var num1 = useRef()
     var num2 = useRef()
     var num3 = useRef()
     var num4 = useRef()
-    var Otp1Focus = ()=>{
+    
+    var Otp1Focus = (item)=>{
     num2.current.focus();
+      otpset1(item)
     }
   
-    var Otp2Focus = ()=>{
+    var Otp2Focus = (item)=>{
     num3.current.focus();
+    otpset2(item)
     }
-    var Otp3Focus = ()=>{
+    var Otp3Focus = (item)=>{
     num4.current.focus();
+    otpset3(item)
     }
-   var Otp4Focus= ()=>{
-    
+   var Otp4Focus= (item)=>{
+    otpset4(item)
     }
     return(
+      
+      
       <View style={styles.container}>
+       { console.log(num1)}
          <View style={styles.header}>
               <Text style={styles.headertxt}>Log into Saavn</Text>
           </View>
-          <ImageBackground style={styles.image} source={require('./Images/otpimage.png')} style={styles.image}>
+          <ImageBackground style={styles.image} source={require('../assets/otpimage.png')} style={styles.image}>
           <View style={styles.txtcontainer}>
              <Text style={styles.Text} >Enter your code</Text>
            </View>
           <View style={styles.otpContainer}>
-      <TextInput keyboardType={'number-pad'} style={styles.otp} maxLength={1}  onChange={()=>Otp1Focus()} ref={num1}/>
-      <TextInput keyboardType={'number-pad'} style={styles.otp} maxLength={1} onChange={()=>Otp2Focus()} ref={num2}/>
-      <TextInput keyboardType={'number-pad'} style={styles.otp} maxLength={1}  onChange={()=>Otp3Focus()} ref={num3}/>
-      <TextInput keyboardType={'number-pad'} style={styles.otp} maxLength={1} onChange={()=>Otp4Focus()} ref={num4}/>
+      <TextInput keyboardType={'number-pad'} style={styles.otp} maxLength={1}  onChangeText={(item)=>Otp1Focus(item)} ref={num1}/>
+      <TextInput keyboardType={'number-pad'} style={styles.otp} maxLength={1} onChangeText={(item)=>Otp2Focus(item)} ref={num2}/>
+      <TextInput keyboardType={'number-pad'} style={styles.otp} maxLength={1}  onChangeText={(item)=>Otp3Focus(item)} ref={num3}/>
+      <TextInput keyboardType={'number-pad'} style={styles.otp} maxLength={1} onChangeText={(item)=>Otp4Focus(item)} ref={num4}/>
       </View>
       <View style={styles.btnContainer}>
-             <TouchableOpacity onPress={()=>alert('otp generated')} style={styles.button}>
+             <TouchableOpacity onPress={()=>alert("Otp Entered :"+`${otp1} ${otp2} ${otp3} ${otp4}`)} style={styles.button}>
                <Text style={styles.buttontxt}>Continue</Text>
              </TouchableOpacity>
            </View>

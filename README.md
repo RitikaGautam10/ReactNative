@@ -6,7 +6,8 @@ Ques1: Create the screen with design given in the link below alongwith backgroun
 Solution : Otpscreen.js
 </div>
 
-![otpscreen1](./Screenshots/otpscreen1.png)
+![otpscreen1](./src/assets/otpscreen1.png)
+![otpscreen2](./src/assets/otpscreen2.png)
 
 <div>
 Ques 2: Create a text input , text and view alongwith the following steps:-
@@ -17,9 +18,9 @@ Ques 2: Create a text input , text and view alongwith the following steps:-
 Solution : HexToRgb.js
 </div>
 
-![hex1](./Screenshots/hex1.png)
-![hex2](./Screenshots/hex2.png)
-![hex3](./Screenshots/hex3.png)
+![hex1](./src/assets/hex1.png)
+![hex2](./src/assets/hex2.png)
+![hex3](./src/assets/hex3.png)
 
 
 
@@ -29,7 +30,7 @@ Ques 3: Create a image view and show activity indicator in place of image while 
 Solution : ImageLoader.js
  </div>
 
-![imageloader1](./Screenshots/imageloader1.png)
-![imageloader2](./Screenshots/imageloader2.png)
+![imageloader1](./src/assets/imageloader1.png)
+![imageloader2](./src/assets/imageloader2.png)
 
 Change index.js file accordingly

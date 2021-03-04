@@ -41,7 +41,7 @@ class HexToRgb extends Component{
             <>
             <SafeAreaView/>
             <View style={styles.container}>
-            <ImageBackground style={styles.image} source={require('./Images/heximage.jpg')}>
+            <ImageBackground style={styles.image} source={require('../assets/heximage.jpg')}>
                 <View>
                 
                 <View style={styles.topcontainer}>
