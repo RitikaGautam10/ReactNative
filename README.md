@@ -7,7 +7,7 @@ Create the above screen in React-Native
 Use View with background color instead of images
 No need to add icons
 
-Solution: style.js
+Solution: Style.js
 
 ![styling1](./Screenshots/styling1.png)
 ![styling2](./Screenshots/styling2.png)
