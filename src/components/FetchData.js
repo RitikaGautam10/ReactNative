@@ -77,9 +77,6 @@ dataStyling = ({item}) => {
             <View style={styles.container}>
             <ScrollView>
                 <View>
-                    <ActivityIndicator animating={this.state.showLoader} style={styles.activityIndicator} size="large" color='blue'/>
-                </View>
-                <View>
                 {
                 !(this.state.showLoader) && !(this.state.data) ? (
                     <View style={styles.btncontainer}>
@@ -89,20 +86,18 @@ dataStyling = ({item}) => {
                     </View>
                 )
                 :(
-                     <View></View>
+                     <View>
+                         <ActivityIndicator animating={this.state.showLoader} style={styles.activityIndicator} size="large" color='blue'/>
+                     </View>
                 )
                 }
                 </View>
                 <View>
-                {
-                    !(this.state.showLoader) && Boolean(this.state.data) && (
                     <FlatList
                         data={this.state.data}
                         renderItem={this.dataStyling}
                         keyExtractor={item => item.id}
                     />
-                    )
-                 }
                 </View>
             
             </ScrollView>
