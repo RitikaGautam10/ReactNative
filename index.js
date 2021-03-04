@@ -7,5 +7,5 @@ import App from './App';
 import { name as appName } from './app.json';
 // import ComponentEx from './ComponentEx';
 //import CounterParent from './CounterParent';
-import Style from './Style';
+import Style from './src/components/Style';
 AppRegistry.registerComponent(appName, () => Style);
