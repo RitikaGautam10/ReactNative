@@ -1,9 +1,9 @@
 <div align='center'>
 
-****React-Native Debugging Assignment
+React-Native Debugging Assignment
 
 </div>
-Question :Create a new Screen 
+Question: Create a new Screen 
 
 Add a button FETCH Data
 On click present a loader and make an API call 
