@@ -68,18 +68,6 @@ function notifications() {
       </View>
     );
   }
-  
-export const Routes = ({}) => {
-    return (
-        <NavigationContainer>
-            <Stack.Navigator >
-                <Stack.Screen options={{headerTitle:'Home Screen'}} name={"HomeScreen"} component={HomeScreen}/>
-                <Stack.Screen options={({ route }) => ({ title: route.params.header})} name={"headerChangedScreen"} component={headerChangedScreen}/>
-                <Stack.Screen options={{headerTitle:'Tab screen'}} name={"Home"} component={Home}/>
-            </Stack.Navigator>
-        </NavigationContainer>
-    )
-}
 
 function Home({navigation}){
         return(
@@ -148,7 +136,19 @@ function Home({navigation}){
         
         )
     };
-
+  
+export const Routes = ({}) => {
+      return (
+          <NavigationContainer>
+              <Stack.Navigator >
+                  <Stack.Screen options={{headerTitle:'Home Screen'}} name={"HomeScreen"} component={HomeScreen}/>
+                  <Stack.Screen options={({ route }) => ({ title: route.params.header})} name={"headerChangedScreen"} component={headerChangedScreen}/>
+                  <Stack.Screen options={{headerTitle:'Tab screen'}} name={"Home"} component={Home}/>
+              </Stack.Navigator>
+          </NavigationContainer>
+      )
+  }
+  
 const styles = StyleSheet.create({
     container:{
         flex:1,
