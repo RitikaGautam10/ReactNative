@@ -1,4 +1,4 @@
-import {Routes} from './src/navigator/Routes';
+import {Routes} from './src/components/Routes';
 
 export default Routes;
 
