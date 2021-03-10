@@ -129,31 +129,31 @@ const ClothsDetails = () => (
     <View style={styles.clothContainer}>
       <View style={styles.clothsInfo}>
         {
-                            itemsList.map(({
-                              image, brand, detail, Price,
-                            }) => (
-                              <TouchableOpacity style={styles.listDesign}>
-                                <View style={styles.imageContainer}>
-                                  <Image style={styles.images} source={image} />
-                                </View>
-                                <View style={styles.detailsContainer}>
-                                  <Text style={styles.brand}>{brand}</Text>
-                                  <Text style={styles.detail}>{detail}</Text>
-                                  <Text style={styles.price}>
-                                    USD
-                                    {Price}
-                                  </Text>
-                                </View>
-                                <View style={styles.new}>
-                                  <Text style={styles.newText}>NEW</Text>
-                                </View>
+            itemsList.map(({
+              image, brand, detail, Price,
+            }) => (
+              <TouchableOpacity style={styles.listDesign}>
+                <View style={styles.imageContainer}>
+                  <Image style={styles.images} source={image} />
+                </View>
+                <View style={styles.detailsContainer}>
+                  <Text style={styles.brand}>{brand}</Text>
+                  <Text style={styles.detail}>{detail}</Text>
+                  <Text style={styles.price}>
+                    USD
+                    {Price}
+                  </Text>
+                </View>
+                <View style={styles.new}>
+                  <Text style={styles.newText}>NEW</Text>
+                </View>
 
-                                <TouchableOpacity style={styles.wishlistContainer} onPress={() => alert('Item Entered to your WishList')}>
-                                  <Image style={{ width: 25, height: 25 }} source={require('../assets/wishlist.png')} />
-                                </TouchableOpacity>
-                              </TouchableOpacity>
-                            ))
-                        }
+                <TouchableOpacity style={styles.wishlistContainer} onPress={() => alert('Item Entered to your WishList')}>
+                  <Image style={{ width: 25, height: 25 }} source={require('../assets/wishlist.png')} />
+                </TouchableOpacity>
+              </TouchableOpacity>
+            ))
+        }
       </View>
     </View>
   </ScrollView>
