@@ -10,12 +10,12 @@ import {
 import {WaveIndicator} from 'react-native-indicators';
 class ModalExample extends Component {
   state = {
-    IndicatorVisible: false,
+    IndicatorShow: false,
     GifShow: false,
   };
 
-  setModalVisible = (visible) => {
-    this.setState({IndicatorVisible: visible});
+  setIndicator = (visible) => {
+    this.setState({IndicatorShow: visible});
   };
 
   setGifShow = (value) => {
@@ -23,21 +23,18 @@ class ModalExample extends Component {
   };
 
   render() {
-    const {IndicatorVisible} = this.state;
+    const {IndicatorShow} = this.state;
     const {GifShow} = this.state;
     return (
       <View style={styles.container}>
-        <Modal
-          animationType="slide"
-          transparent={true}
-          visible={IndicatorVisible}>
+        <Modal animationType="slide" transparent={true} visible={IndicatorShow}>
           <View style={styles.modalContainer}>
             <View style={styles.modal}>
               <Text style={styles.Text}>Custom Activity Indicator!</Text>
               <WaveIndicator color="red" />
               <TouchableOpacity
                 style={styles.button}
-                onPress={() => this.setModalVisible(false)}>
+                onPress={() => this.setIndicator(false)}>
                 <Text style={styles.textStyle}>
                   Hide Custom Activity Indicator!
                 </Text>
@@ -47,7 +44,7 @@ class ModalExample extends Component {
         </Modal>
         <TouchableOpacity
           style={styles.button}
-          onPress={() => this.setModalVisible(true)}>
+          onPress={() => this.setIndicator(true)}>
           <Text style={styles.textStyle}>Show Custom Activity Indicator!</Text>
         </TouchableOpacity>
 
