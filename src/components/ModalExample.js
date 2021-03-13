@@ -106,9 +106,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'green',
     margin: 20,
   },
-  buttonClose: {
-    backgroundColor: '#2196F3',
-  },
   textStyle: {
     color: 'white',
     fontWeight: 'bold',
