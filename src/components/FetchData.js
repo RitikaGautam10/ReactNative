@@ -24,63 +24,65 @@ class FetchData extends Component{
     constructor(props){
         super(props)
         this.state={
-            data:"",
+            data:[],
            showLoader:false
         };
     }
     
 
-Onload = async () => {
+Onload = async() => {
     this.setState({
         showLoader:true,
     });
     try{
-        const response= await fetch('https://reqres.in/api/users',{
-            method:'GET',
-        });
-        const json=await response.json();
-        setTimeout(() => {
-            this.setState({
-                showLoader: false,
-                data:json.data
+            const response= await fetch('https://reqres.in/api/users',{
+                method:'GET',
             });
-        }, 2000);
-        
-    }
-    catch(error){
-        alert('Unable to fetch data');
-    }
-};
+            const json=await response.json();
+            setTimeout(() => {
+                this.setState({
+                    showLoader: false,
+                    data:[...this.state.data,...json.data]
+                });
+            }, 2000);
+            
+        }
+        catch(error){
+            alert('Unable to fetch data');
+        }}
+    
+    
 
-dataStyling = ({item}) => {
-    return (
-      <View style={styles.dataContainer}>
-        <Image style={styles.avatar} source={{ uri: item.avatar}}  />
-        <View>
-            <Text style={styles.id}>
-                ID : {item.id}
-            </Text>
-            <Text style={styles.name}>
-                {item.first_name} {item.last_name}
-            </Text>
-            <Text style={styles.email}>
-                {item.email}
-            </Text>
-        </View>
-      </View>
-    );
-  };
+// dataStyling = ({item}) => {
+//     return (
+//       <View style={styles.dataContainer}>
+//         <Image style={styles.avatar} source={{ uri: item.avatar}}  />
+//         <View>
+//             <Text style={styles.id}>
+//                 ID : {item.id}
+//             </Text>
+//             <Text style={styles.name}>
+//                 {item.first_name} {item.last_name}
+//             </Text>
+//             <Text style={styles.email}>
+//                 {item.email}
+//             </Text>
+//         </View>
+//       </View>
+//     );
+//   };
   render(){
-        return(
+      const {data}=this.state
+       return(
             <>
-            <SafeAreaView/>
+            <SafeAreaView style={{flex:1}}>
             <View style={styles.container}>
             <ScrollView>
                 <View>
                 {
-                !(this.state.showLoader) && !(this.state.data) ? (
+                !(this.state.showLoader)  ? (
                     <View style={styles.btncontainer}>
-                        <TouchableOpacity style={styles.button} onPress={this.Onload}>
+                        <TouchableOpacity style={styles.button} onPress={this.Onload()}>
                             <Text style={styles.buttontxt}>FETCH DATA</Text>
                         </TouchableOpacity>
                     </View>
@@ -92,16 +94,34 @@ dataStyling = ({item}) => {
                 )
                 }
                 </View>
-                <View>
-                    <FlatList
-                        data={this.state.data}
-                        renderItem={this.dataStyling}
-                        keyExtractor={item => item.id}
-                    />
-                </View>
+                
+                <View  style={styles.container}>
+
+                { !(this.state.showLoader)&& data.map((item)=>
+   
+                    <View  style={styles.dataContainer}>
+                      <Image style={styles.avatar} source={{ uri: item.avatar}}  />
+                      <View>
+                          <Text style={styles.id}>
+                              ID : {item.id}
+                          </Text>
+                          <Text style={styles.name}>
+                             {item.first_name} {item.last_name}`
+                          </Text>
+                          <Text style={styles.email}>
+                              {item.email}
+                          </Text>
+                      </View>
+                    </View>
+                  )}
+            </View>
+           
+        
+                
             
             </ScrollView>
             </View>
+            </SafeAreaView>
             </>
             
         )
@@ -110,7 +130,8 @@ dataStyling = ({item}) => {
 const styles = StyleSheet.create({
   container:{
       flex:1,
-      margin:20
+      margin:20,
+      
   },
   btncontainer:{
     marginTop:200,
