@@ -73,7 +73,7 @@ class screen extends Component {
                     style={[
                       styles.fadingContainer,
                       {
-                        opacity: this.state.fadeAnim, // Bind opacity to animated value
+                        opacity: this.state.fadeAnim,
                       },
                     ]}>
                     <Image key={i} style={styles.image} source={uri} />
