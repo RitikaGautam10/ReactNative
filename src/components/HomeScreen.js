@@ -1,6 +1,12 @@
 import React from 'react';
 import {
-  View, Text, StyleSheet, Image, SafeAreaView, TouchableOpacity, ScrollView,
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  SafeAreaView,
+  TouchableOpacity,
+  ScrollView,
 } from 'react-native';
 
 const itemsList = [
@@ -8,58 +14,59 @@ const itemsList = [
     id: 0,
     image: require('../assets/shirt1.jpg'),
     brand: 'Tommy Hilfiger',
-    detail: 'Men\'s Morrison Stripe Polo, Limelight Combo',
+    detail: "Men's Morrison Stripe Polo, Limelight Combo",
     Price: 23,
   },
   {
     id: 1,
     image: require('../assets/shirt2.jpg'),
     brand: 'Tommy Hilfiger',
-    detail: 'Men\'s Longsleeve Hooded Sweater, White/Black/Red',
+    detail: "Men's Longsleeve Hooded Sweater, White/Black/Red",
     Price: 23,
   },
   {
     id: 2,
     image: require('../assets/shirt3.jpeg'),
     brand: 'Tommy Hilfiger',
-    detail: 'Men\'s Morrison Stripe Polo, Limelight Combo',
+    detail: "Men's Morrison Stripe Polo, Limelight Combo",
     Price: 24,
   },
   {
     id: 3,
     image: require('../assets/shirt4.jpeg'),
     brand: 'Tommy Hilfiger',
-    detail: 'Men\'s Morrison Stripe Polo, Limelight Combo',
+    detail: "Men's Morrison Stripe Polo, Limelight Combo",
     Price: 25,
   },
   {
     id: 4,
     image: require('../assets/shirt5.jpeg'),
     brand: 'Tommy Hilfiger',
-    detail: 'Men\'s Morrison Stripe Polo, Limelight Combo',
+    detail: "Men's Morrison Stripe Polo, Limelight Combo",
     Price: 29,
   },
   {
     id: 5,
     image: require('../assets/shirt6.jpg'),
     brand: 'Tommy Hilfiger',
-    detail: 'Men\'s Morrison Stripe Polo, Limelight Combo',
+    detail: "Men's Morrison Stripe Polo, Limelight Combo",
     Price: 21,
   },
   {
     id: 6,
     image: require('../assets/shirt1.jpg'),
     brand: 'Tommy Hilfiger',
-    detail: 'Men\'s Morrison Stripe Polo, Limelight Combo',
+    detail: "Men's Morrison Stripe Polo, Limelight Combo",
     Price: 29,
   },
   {
     id: 7,
     image: require('../assets/shirt2.jpg'),
     brand: 'Tommy Hilfiger',
-    detail: 'Men\'s Morrison Stripe Polo, Limelight Combo',
+    detail: "Men's Morrison Stripe Polo, Limelight Combo",
     Price: 21,
-  }];
+  },
+];
 
 const sortList = () => {
   itemsList.sort((obj1, obj2) => obj1.Price - obj2.Price);
@@ -69,7 +76,6 @@ const sortList = () => {
 
 const HomeScreen = () => (
   <SafeAreaView style={styles.container}>
-
     <Text style={styles.header}>MEN CLOTHING</Text>
 
     <View style={styles.horizontalLine} />
@@ -80,7 +86,10 @@ const HomeScreen = () => (
 
       <View style={styles.touch}>
         <TouchableOpacity style={styles.button} onPress={sortList}>
-          <Image style={styles.icon} source={require('../assets/sortarrow.png')} />
+          <Image
+            style={styles.icon}
+            source={require('../assets/sortarrow.png')}
+          />
           <Text style={styles.sorttext}>SORT</Text>
         </TouchableOpacity>
 
@@ -118,7 +127,7 @@ const HomeScreen = () => (
         </View>
       </ScrollView>
     </View>
-    <View style={{ flex: 1 }}>
+    <View style={{flex: 1}}>
       <ClothsDetails />
     </View>
     <View style={styles.horizontalLine} />
@@ -128,32 +137,33 @@ const ClothsDetails = () => (
   <ScrollView>
     <View style={styles.clothContainer}>
       <View style={styles.clothsInfo}>
-        {
-            itemsList.map(({
-              image, brand, detail, Price,
-            }) => (
-              <TouchableOpacity style={styles.listDesign}>
-                <View style={styles.imageContainer}>
-                  <Image style={styles.images} source={image} />
-                </View>
-                <View style={styles.detailsContainer}>
-                  <Text style={styles.brand}>{brand}</Text>
-                  <Text style={styles.detail}>{detail}</Text>
-                  <Text style={styles.price}>
-                    USD
-                    {Price}
-                  </Text>
-                </View>
-                <View style={styles.new}>
-                  <Text style={styles.newText}>NEW</Text>
-                </View>
+        {itemsList.map(({image, brand, detail, Price}) => (
+          <TouchableOpacity style={styles.listDesign}>
+            <View style={styles.imageContainer}>
+              <Image style={styles.images} source={image} />
+            </View>
+            <View style={styles.detailsContainer}>
+              <Text style={styles.brand}>{brand}</Text>
+              <Text style={styles.detail}>{detail}</Text>
+              <Text style={styles.price}>
+                USD
+                {Price}
+              </Text>
+            </View>
+            <View style={styles.new}>
+              <Text style={styles.newText}>NEW</Text>
+            </View>
 
-                <TouchableOpacity style={styles.wishlistContainer} onPress={() => alert('Item Entered to your WishList')}>
-                  <Image style={{ width: 25, height: 25 }} source={require('../assets/wishlist.png')} />
-                </TouchableOpacity>
-              </TouchableOpacity>
-            ))
-        }
+            <TouchableOpacity
+              style={styles.wishlistContainer}
+              onPress={() => alert('Item Entered to your WishList')}>
+              <Image
+                style={{width: 25, height: 25}}
+                source={require('../assets/wishlist.png')}
+              />
+            </TouchableOpacity>
+          </TouchableOpacity>
+        ))}
       </View>
     </View>
   </ScrollView>
@@ -172,7 +182,6 @@ const styles = StyleSheet.create({
   horizontalLine: {
     borderWidth: 1,
     borderColor: 'lightgrey',
-
   },
   sortContainer: {
     flexDirection: 'row',
@@ -281,6 +290,5 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginTop: 5,
   },
-
 });
 export default HomeScreen;

@@ -1,19 +1,16 @@
 import React from 'react';
-import {
-  View, Text, StyleSheet, Image,
-} from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import {View, Text, StyleSheet, Image} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import HomeScreen from './HomeScreen';
-
+import Account from './Account';
 const Tab = createBottomTabNavigator();
 
 function Categories() {
   return (
     <View style={styles.common}>
       <Text style={styles.text}>Categories!!!</Text>
-
     </View>
   );
 }
@@ -29,44 +26,41 @@ function Wishlist() {
   return (
     <View style={styles.common}>
       <Text style={styles.text}>Your Wishlist!!!</Text>
-
     </View>
   );
 }
-function Account() {
-  return (
-    <View style={styles.common}>
-      <Text style={styles.text}>Your Account!!!</Text>
 
-    </View>
-  );
-}
 const Screen = ({}) => (
   <NavigationContainer>
     <Tab.Navigator
-      initialRouteName="HomeScreen"
+      initialRouteName="Account"
       tabBarOptions={{
         activeTintColor: 'red',
         inactiveTintColor: 'black',
-        labelStyle: { fontSize: 13 },
+        labelStyle: {fontSize: 13},
         style: {
           height: 100,
         },
-      }}
-    >
+      }}>
       <Tab.Screen
         name="HomeScreen"
         component={HomeScreen}
         options={{
           tabBarLabel: 'Home',
-          tabBarIcon: ({ focused }) => {
+          tabBarIcon: ({focused}) => {
             if (focused) {
               return (
-                <Image style={styles.icon} source={require('../assets/homeactive.png')} />
+                <Image
+                  style={styles.icon}
+                  source={require('../assets/homeactive.png')}
+                />
               );
             }
             return (
-              <Image style={styles.icon} source={require('../assets/home.png')} />
+              <Image
+                style={styles.icon}
+                source={require('../assets/home.png')}
+              />
             );
           },
         }}
@@ -76,15 +70,20 @@ const Screen = ({}) => (
         component={Categories}
         options={{
           tabBarLabel: 'Categories',
-          tabBarIcon: ({ focused }) => {
+          tabBarIcon: ({focused}) => {
             if (focused) {
               return (
-                <Image style={styles.icon} source={require('../assets/categoriesactive.png')} />
-
+                <Image
+                  style={styles.icon}
+                  source={require('../assets/categoriesactive.png')}
+                />
               );
             }
             return (
-              <Image style={styles.icon} source={require('../assets/categories.png')} />
+              <Image
+                style={styles.icon}
+                source={require('../assets/categories.png')}
+              />
             );
           },
         }}
@@ -94,14 +93,20 @@ const Screen = ({}) => (
         component={Cart}
         options={{
           tabBarLabel: 'My Cart',
-          tabBarIcon: ({ focused }) => {
+          tabBarIcon: ({focused}) => {
             if (focused) {
               return (
-                <Image style={styles.icon} source={require('../assets/cartactive.png')} />
+                <Image
+                  style={styles.icon}
+                  source={require('../assets/cartactive.png')}
+                />
               );
             }
             return (
-              <Image style={styles.icon} source={require('../assets/cart.png')} />
+              <Image
+                style={styles.icon}
+                source={require('../assets/cart.png')}
+              />
             );
           },
         }}
@@ -111,14 +116,20 @@ const Screen = ({}) => (
         component={Wishlist}
         options={{
           tabBarLabel: 'Wishlist',
-          tabBarIcon: ({ focused }) => {
+          tabBarIcon: ({focused}) => {
             if (focused) {
               return (
-                <Image style={styles.icon} source={require('../assets/wishlistactive.png')} />
+                <Image
+                  style={styles.icon}
+                  source={require('../assets/wishlistactive.png')}
+                />
               );
             }
             return (
-              <Image style={styles.icon} source={require('../assets/wishlist.png')} />
+              <Image
+                style={styles.icon}
+                source={require('../assets/wishlist.png')}
+              />
             );
           },
         }}
@@ -128,14 +139,20 @@ const Screen = ({}) => (
         component={Account}
         options={{
           tabBarLabel: 'Account',
-          tabBarIcon: ({ focused }) => {
+          tabBarIcon: ({focused}) => {
             if (focused) {
               return (
-                <Image style={styles.icon} source={require('../assets/accountactive.png')} />
+                <Image
+                  style={styles.icon}
+                  source={require('../assets/accountactive.png')}
+                />
               );
             }
             return (
-              <Image style={styles.icon} source={require('../assets/account.png')} />
+              <Image
+                style={styles.icon}
+                source={require('../assets/account.png')}
+              />
             );
           },
         }}
