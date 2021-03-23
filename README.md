@@ -1,13 +1,15 @@
-<Div align="center">ReactNative Assignement</Div>
+<Div align="center">React Native Components -3 Assignment Part - II </Div>
 
 
-Create the above screen in React-Native 
+Use the same App used in the above assignment and create add new screens
 
-Tab Navigation needs to integrated 
-Home tab must be selected 
-Icons can be fetched from icons8.com 
-Sort, filter, wishlist should be touchable
-No need for back icon
+Points to consider: 
 
+1) Sign Page and Join Page are single screen with toggle on top 
 
-![gif](./src/assets/gif.gif)
+2) Sign Page and Join Page needs to be implemented on Modal 
+
+3) Account Tab needs to be active when the screen is rendered 
+
+4) Use Flat list to render all the menu items.
+

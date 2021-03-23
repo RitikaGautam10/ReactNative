@@ -38,6 +38,13 @@ class SignIn extends Component {
                       <Text style={styles.signText}>Sign In</Text>
                     </TouchableOpacity>
                   </View>
+                  <View style={styles.lineContainer}>
+                    <View style={styles.line} />
+                    <View style={styles.circle}>
+                      <Text style={styles.circleText}>or</Text>
+                    </View>
+                    <View style={styles.line} />
+                  </View>
 
                   <View style={styles.buttonContainer}>
                     <TouchableOpacity style={styles.firsttouchButton}>
@@ -115,10 +122,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '50%',
   },
-  innerContainer: {
-    // marginTop: 100,
-    // marginBottom: 100,
-  },
+
   modalInnerContainer: {
     justifyContent: 'flex-start',
   },
@@ -151,6 +155,26 @@ const styles = StyleSheet.create({
   buttonContainer: {
     marginLeft: 20,
     marginRight: 20,
+  },
+  lineContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 17,
+  },
+  line: {
+    borderBottomWidth: 1,
+    borderBottomColor: 'lightgrey',
+    width: '50%',
+  },
+  circle: {
+    borderColor: 'lightgrey',
+    borderRadius: 100,
+    borderWidth: 1,
+    padding: 15,
+  },
+  circleText: {
+    fontSize: 17,
   },
   firsttouchButton: {
     borderWidth: 1,

@@ -83,7 +83,13 @@ class SignIn extends Component {
                     <Text style={styles.signText}>Join Now</Text>
                   </TouchableOpacity>
                 </View>
-
+                <View style={styles.lineContainer}>
+                  <View style={styles.line} />
+                  <View style={styles.circle}>
+                    <Text style={styles.circleText}>or</Text>
+                  </View>
+                  <View style={styles.line} />
+                </View>
                 <View style={styles.buttonContainer}>
                   <TouchableOpacity style={styles.firsttouchButton}>
                     <View style={styles.touch}>
@@ -185,6 +191,26 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     height: 20,
     margin: 20,
+  },
+  lineContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 17,
+  },
+  line: {
+    borderBottomWidth: 1,
+    borderBottomColor: 'lightgrey',
+    width: '50%',
+  },
+  circle: {
+    borderColor: 'lightgrey',
+    borderRadius: 100,
+    borderWidth: 1,
+    padding: 15,
+  },
+  circleText: {
+    fontSize: 17,
   },
   forgotContainer: {
     justifyContent: 'center',

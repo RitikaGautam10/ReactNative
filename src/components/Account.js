@@ -64,6 +64,17 @@ const DataStyling = ({item}) => {
         <Text style={styles.title}>{item.title}</Text>
       </View>
       <View style={styles.arrowContainer}>
+        {item.title === 'Country' ? (
+          <View style={styles.rightIcons}>
+            <Image style={styles.icons} source={require('../assets/usa.png')} />
+            <Text>USD</Text>
+          </View>
+        ) : null}
+        {item.title === 'Language' ? (
+          <View style={styles.rightIcons}>
+            <Text>ENG</Text>
+          </View>
+        ) : null}
         <TouchableOpacity>
           <Image
             style={styles.arrow}
@@ -261,8 +272,15 @@ const styles = StyleSheet.create({
     fontWeight: '500',
   },
   arrowContainer: {
+    flexDirection: 'row',
     justifyContent: 'flex-end',
-    alignItems: 'flex-end',
+    alignItems: 'center',
+  },
+  rightIcons: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 15,
   },
   footer: {
     alignItems: 'center',
