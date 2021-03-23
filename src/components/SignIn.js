@@ -114,10 +114,7 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     padding: 10,
   },
-  button: {
-    borderBottomWidth: 5,
-    borderColor: 'orange',
-  },
+
   modalContainer: {
     width: '100%',
     height: '50%',
@@ -129,7 +126,7 @@ const styles = StyleSheet.create({
   textInput: {
     borderWidth: 1,
     height: 55,
-    borderColor: 'black',
+    borderColor: 'grey',
     margin: 20,
     paddingLeft: 10,
     fontSize: 15,
@@ -140,7 +137,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 1,
     height: 55,
-    borderColor: 'black',
+    borderColor: 'grey',
     marginLeft: 20,
     marginRight: 20,
     paddingLeft: 10,
@@ -189,7 +186,7 @@ const styles = StyleSheet.create({
     height: 60,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'blue',
+    backgroundColor: '#0658b3',
   },
   thirdtouchButton: {
     borderWidth: 1,
@@ -251,6 +248,10 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 20,
     fontWeight: '500',
+  },
+  sign: {
+    paddingLeft: 20,
+    fontSize: 15,
   },
 });
 export default SignIn;

@@ -97,7 +97,7 @@ class SignIn extends Component {
                         style={styles.img}
                         source={require('../assets/google.png')}
                       />
-                      <Text style={styles.btnText}>Sign in with Google</Text>
+                      <Text style={styles.btnText}>Join with Google</Text>
                     </View>
                   </TouchableOpacity>
 
@@ -107,9 +107,7 @@ class SignIn extends Component {
                         style={styles.img}
                         source={require('../assets/facebook.png')}
                       />
-                      <Text style={styles.secbtnText}>
-                        Sign in with Facebook
-                      </Text>
+                      <Text style={styles.secbtnText}>Join with Facebook</Text>
                     </View>
                   </TouchableOpacity>
 
@@ -119,9 +117,7 @@ class SignIn extends Component {
                         style={styles.img}
                         source={require('../assets/apple.png')}
                       />
-                      <Text style={styles.thirdbtnText}>
-                        Sign in with Apple
-                      </Text>
+                      <Text style={styles.thirdbtnText}>Join with Apple</Text>
                     </View>
                   </TouchableOpacity>
 
@@ -157,7 +153,7 @@ const styles = StyleSheet.create({
   textInput: {
     borderWidth: 1,
     height: 50,
-    borderColor: 'black',
+    borderColor: 'grey',
     marginLeft: 20,
     marginRight: 20,
     marginBottom: 15,
@@ -169,7 +165,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 1,
     height: 50,
-    borderColor: 'black',
+    borderColor: 'grey',
     marginLeft: 20,
     marginRight: 20,
     marginBottom: 15,
@@ -180,7 +176,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderWidth: 1,
     height: 50,
-    borderColor: 'black',
+    borderColor: 'grey',
     marginLeft: 20,
     marginRight: 20,
     marginBottom: 15,
@@ -205,7 +201,7 @@ const styles = StyleSheet.create({
   },
   circle: {
     borderColor: 'lightgrey',
-    borderRadius: 100,
+    borderRadius: 40,
     borderWidth: 1,
     padding: 15,
   },
@@ -222,22 +218,22 @@ const styles = StyleSheet.create({
   },
   firsttouchButton: {
     borderWidth: 1,
-    marginTop: 10,
+    marginTop: 15,
     height: 60,
     justifyContent: 'center',
     alignItems: 'center',
   },
   secondtouchButton: {
     borderWidth: 1,
-    marginTop: 10,
+    marginTop: 15,
     height: 60,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'blue',
+    backgroundColor: '#0658b3',
   },
   thirdtouchButton: {
     borderWidth: 1,
-    marginTop: 10,
+    marginTop: 15,
     height: 60,
     justifyContent: 'center',
     alignItems: 'center',
@@ -245,7 +241,7 @@ const styles = StyleSheet.create({
   },
   fourthtouchButton: {
     borderWidth: 1,
-    marginTop: 50,
+    marginTop: 70,
     height: 60,
     justifyContent: 'center',
     alignItems: 'center',

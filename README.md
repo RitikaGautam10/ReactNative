@@ -13,4 +13,4 @@ Points to consider:
 
 4) Use Flat list to render all the menu items.
 
-![outputScreen](./src/assets/mainScreenIcons/outputScreen.gif)
+![screenOutput](./src/assets/mainScreenIcons/screenOutput.gif)

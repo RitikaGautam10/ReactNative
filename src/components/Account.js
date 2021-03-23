@@ -90,15 +90,27 @@ class Account extends Component {
     super(props);
     this.state = {
       isModalVisible: false,
-      screen: 0,
+      isSignInScreen: false,
+      isJoinInScreen: false,
     };
   }
 
   setModalVisible = (visible) => {
     this.setState({isModalVisible: visible});
   };
-  openModalScreen = (index) => {
-    this.setState({isModalVisible: true, screen: index});
+  openModalSignInScreen = (value) => {
+    this.setState({
+      isModalVisible: true,
+      isSignInScreen: value,
+      isJoinInScreen: false,
+    });
+  };
+  openModalJoinInScreen = (value) => {
+    this.setState({
+      isModalVisible: true,
+      isSignInScreen: false,
+      isJoinInScreen: value,
+    });
   };
 
   render() {
@@ -109,11 +121,13 @@ class Account extends Component {
             <View>
               <Text style={styles.headerText}>Welcome!</Text>
               <View style={styles.btn}>
-                <TouchableOpacity onPress={() => this.openModalScreen(0)}>
+                <TouchableOpacity
+                  onPress={() => this.openModalSignInScreen(true)}>
                   <Text>SIGN IN</Text>
                 </TouchableOpacity>
                 <View style={styles.verticalLine} />
-                <TouchableOpacity onPress={() => this.openModalScreen(1)}>
+                <TouchableOpacity
+                  onPress={() => this.openModalJoinInScreen(true)}>
                   <Text>JOIN</Text>
                 </TouchableOpacity>
               </View>
@@ -162,18 +176,18 @@ class Account extends Component {
 
               <View style={styles.modelheaderContainer}>
                 <TouchableOpacity
-                  style={this.state.screen === 0 ? styles.border : null}
-                  onPress={() => this.openModalScreen(0)}>
+                  style={this.state.isSignInScreen ? styles.border : null}
+                  onPress={() => this.openModalSignInScreen(true)}>
                   <Text style={styles.text}>Sign In</Text>
                 </TouchableOpacity>
                 <TouchableOpacity
-                  style={this.state.screen === 1 ? styles.border : null}
-                  onPress={() => this.openModalScreen(1)}>
+                  style={this.state.isJoinInScreen ? styles.border : null}
+                  onPress={() => this.openModalJoinInScreen(true)}>
                   <Text style={styles.text}>Join</Text>
                 </TouchableOpacity>
               </View>
             </View>
-            {this.state.screen === 0 ? <SignIn /> : <JoinIn />}
+            {this.state.isSignInScreen ? <SignIn /> : <JoinIn />}
           </Modal>
         </SafeAreaView>
       </>
@@ -186,6 +200,7 @@ const styles = StyleSheet.create({
     margin: 20,
   },
   headerConatiner: {
+    marginTop: 20,
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -199,8 +214,8 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
   },
   Icon: {
-    width: 20,
-    height: 20,
+    width: 30,
+    height: 30,
   },
   text: {
     fontSize: 30,
