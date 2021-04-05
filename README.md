@@ -10,3 +10,4 @@ Use Stack Navigator for Navigation
 4. By Pressing any note on Notes List screen user will be able to edit and update that note on Add/Edit Note Screen
 5. By Long Pressing any note user will get alert to delete that particular not
 
+![screenoutput](./src/assets/screenoutput.gif)
