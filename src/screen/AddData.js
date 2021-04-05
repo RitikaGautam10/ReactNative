@@ -117,12 +117,21 @@ class AddData extends Component {
           <Modal visible={this.state.isModalVisible}>
             <View style={styles.headerContainer}>
               <Text style={styles.header}>Add a update Note</Text>
+              <TouchableOpacity
+                style={styles.crossIcon}
+                onPress={() => this.props.navigation.navigate('ToDoList')}>
+                <Image
+                  style={styles.icon}
+                  source={require('../assets/cross.png')}
+                />
+              </TouchableOpacity>
             </View>
             <View style={styles.titleContainer}>
               <TextInput
                 multiline={true}
                 style={styles.title}
                 placeholder="Enter Title"
+                value={this.state.updatedTitle}
                 onChangeText={(text) => this.changedUpdatedText(text)}
               />
             </View>
@@ -131,6 +140,7 @@ class AddData extends Component {
                 multiline={true}
                 style={styles.note}
                 placeholder="Add a Note here"
+                value={this.state.updatedDetail}
                 onChangeText={(text) => this.changedUpdatedDetail(text)}
               />
             </View>
