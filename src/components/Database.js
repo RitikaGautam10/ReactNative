@@ -33,17 +33,24 @@ let searchEmployee = (name) => {
   return EmpData.filtered(`Emp_name CONTAINS[c]'${name}'`);
 };
 
-let sortEmployee = (order) => {
+let sortEmployeeAsc = (order) => {
   const EmpData = realm.objects('User_Data');
-  if (order === 'ascending') {
-    return EmpData.sorted('Emp_sal');
-  } else {
-    return EmpData.sorted('Emp_sal', true);
-  }
+  return EmpData.sorted('Emp_sal');
+};
+let sortEmployeeDsc = (order) => {
+  const EmpData = realm.objects('User_Data');
+  return EmpData.sorted('Emp_sal', true);
 };
 let deleteEmployee = () => {
   realm.write(() => {
     realm.deleteAll();
   });
 };
-export {getEmployee, addEmployee, sortEmployee, searchEmployee, deleteEmployee};
+export {
+  getEmployee,
+  addEmployee,
+  sortEmployeeAsc,
+  sortEmployeeDsc,
+  searchEmployee,
+  deleteEmployee,
+};

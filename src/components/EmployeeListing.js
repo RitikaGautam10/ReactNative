@@ -11,11 +11,12 @@ import {
 import {
   getEmployee,
   addEmployee,
-  sortEmployee,
+  sortEmployeeAsc,
+  sortEmployeeDsc,
   searchEmployee,
   deleteEmployee,
 } from './Database';
-import Modal from 'react-native-modal';
+
 class EmployeeListing extends Component {
   constructor(props) {
     super(props);
@@ -25,7 +26,6 @@ class EmployeeListing extends Component {
       name: '',
       salary: '',
       designation: '',
-      isModalVisible: false,
     };
   }
   componentDidMount() {
@@ -36,11 +36,7 @@ class EmployeeListing extends Component {
       user: getEmployee(),
     });
   };
-  modalVisible = (value) => {
-    this.setState({
-      isModalVisible: value,
-    });
-  };
+
   DataStyling({item}) {
     return (
       <View style={styles.dataContainer}>
@@ -63,11 +59,14 @@ class EmployeeListing extends Component {
     });
   };
 
-  sortEmployees = (value) => {
-    if (value === 'ascending') {
-      this.setState({user: sortEmployee('ascending')});
-    } else {
-      this.setState({user: sortEmployee('descending')});
+  sortEmployeesInAsc = () => {
+    if (this.state.user.length > 2) {
+      this.setState({user: sortEmployeeAsc()});
+    }
+  };
+  sortEmployeesInDsc = () => {
+    if (this.state.user.length > 2) {
+      this.setState({user: sortEmployeeDsc()});
     }
   };
   delete = () => {
@@ -81,21 +80,26 @@ class EmployeeListing extends Component {
       <>
         <SafeAreaView />
         <View style={styles.container}>
+          <View style={styles.reloadButton}>
+            <TouchableOpacity style={styles.but} onPress={() => this.setUser()}>
+              <Text>Reload</Text>
+            </TouchableOpacity>
+          </View>
           <View style={styles.button}>
             <TouchableOpacity
               style={styles.but}
-              onPress={() => this.modalVisible(true)}>
+              onPress={() => this.props.navigation.navigate('AddEmployee')}>
               <Text>Add</Text>
             </TouchableOpacity>
 
             <TouchableOpacity
               style={styles.but}
-              onPress={() => this.sortEmployees('ascending')}>
+              onPress={() => this.sortEmployeesInAsc()}>
               <Text>Sort Ascending</Text>
             </TouchableOpacity>
             <TouchableOpacity
               style={styles.but}
-              onPress={() => this.sortEmployees('descending')}>
+              onPress={() => this.sortEmployeesInDsc()}>
               <Text>Sort Descending</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.but} onPress={() => this.delete()}>
@@ -123,38 +127,6 @@ class EmployeeListing extends Component {
               keyExtractor={(item, index) => item + index}
             />
           )}
-
-          <Modal
-            swipeDirection="down"
-            animationType="slide"
-            isVisible={this.state.isModalVisible}
-            onBackdropPress={() => this.modalVisible(false)}>
-            <View style={styles.modalContainer}>
-              <TextInput
-                style={styles.textinput}
-                onChangeText={(text) => this.setState({id: text})}
-                placeholder="Enter Id"
-              />
-              <TextInput
-                style={styles.textinput}
-                onChangeText={(text) => this.setState({name: text})}
-                placeholder="Enter Name"
-              />
-              <TextInput
-                style={styles.textinput}
-                placeholder="Enter Designation"
-                onChangeText={(text) => this.setState({designation: text})}
-              />
-              <TextInput
-                style={styles.textinput}
-                onChangeText={(text) => this.setState({salary: text})}
-                placeholder="Enter Salary"
-              />
-              <TouchableOpacity style={styles.submit} onPress={this.addData}>
-                <Text>Submit</Text>
-              </TouchableOpacity>
-            </View>
-          </Modal>
         </View>
       </>
     );
@@ -232,5 +204,10 @@ const styles = StyleSheet.create({
     width: 100,
     alignSelf: 'center',
     marginTop: 50,
+  },
+  reloadButton: {
+    margin: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
 });

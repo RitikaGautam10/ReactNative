@@ -18,12 +18,17 @@ class AddEmployee extends Component {
     };
   }
   addData = () => {
-    addEmployee(
-      this.state.id,
-      this.state.name,
-      this.state.designation,
-      this.state.salary,
-    );
+    if (this.state.salary > 500000) {
+      alert('salary should not exceed 5,00,000');
+    } else {
+      addEmployee(
+        this.state.id,
+        this.state.name,
+        this.state.designation,
+        this.state.salary,
+      );
+    }
+
     this.props.navigation.navigate('EmployeeListing');
   };
   render() {

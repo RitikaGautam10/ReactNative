@@ -5,5 +5,5 @@
 import {AppRegistry} from 'react-native';
 import App from './App';
 import {name as appName} from './app.json';
-import EmployeeListing from './src/components/EmployeeListing';
-AppRegistry.registerComponent(appName, () => EmployeeListing);
+import Navigation from './src/components/Navigation';
+AppRegistry.registerComponent(appName, () => Navigation);
