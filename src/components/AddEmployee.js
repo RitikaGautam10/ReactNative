@@ -5,6 +5,7 @@ import {
   TextInput,
   StyleSheet,
   TouchableOpacity,
+  Alert,
 } from 'react-native';
 import {addEmployee} from './Database';
 class AddEmployee extends Component {
@@ -19,7 +20,13 @@ class AddEmployee extends Component {
   }
   addData = () => {
     if (this.state.salary > 500000) {
-      alert('salary should not exceed 5,00,000');
+      Alert.alert('Salary', 'salary should not exceed 5,00,000');
+    } else if (isNaN(this.state.id)) {
+      Alert.alert('Employee Id', 'It should be unique and contain only digits');
+    } else if (/[^a-zA-Z]/.test(this.state.name)) {
+      Alert.alert('Name', 'It should contain only alphabets');
+    } else if (/[^a-zA-Z]/.test(this.state.designation)) {
+      Alert.alert('Designation', 'It should contain only alphabets');
     } else {
       addEmployee(
         this.state.id,
