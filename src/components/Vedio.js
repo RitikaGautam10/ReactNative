@@ -1,5 +1,5 @@
 import React from 'react';
-import {Dimensions, SafeAreaView, View} from 'react-native';
+import {Dimensions, SafeAreaView, View, StyleSheet} from 'react-native';
 import VideoPlayer from 'react-native-video-player';
 
 const {width} = Dimensions.get('window');
@@ -7,7 +7,7 @@ const {width} = Dimensions.get('window');
 export default class Video extends React.Component {
   render() {
     return (
-      <View>
+      <View style={styles.contaiinter}>
         <VideoPlayer
           video={{
             uri:
@@ -22,3 +22,10 @@ export default class Video extends React.Component {
     );
   }
 }
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});

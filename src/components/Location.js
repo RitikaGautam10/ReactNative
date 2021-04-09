@@ -75,10 +75,11 @@ class Location extends Component {
             />
           </MapView>
         )}
-
-        <Text>
-          My Location : Latitute : {this.state.lat} Longitude :{this.state.lng}
-        </Text>
+        <View style={styles.txtContainer}>
+          <Text style={styles.txt}>My Location : </Text>
+          <Text style={styles.txt}>Latitute : {this.state.lat}</Text>
+          <Text style={styles.txt}>Longitude :{this.state.lng}</Text>
+        </View>
         <View style={styles.button}>
           <TouchableOpacity
             style={styles.but}
@@ -116,5 +117,13 @@ const styles = StyleSheet.create({
     borderColor: 'red',
     padding: 10,
     backgroundColor: 'yellow',
+    borderRadius: 20,
+  },
+  txt: {
+    fontSize: 20,
+  },
+  txtContainer: {
+    margin: 10,
+    alignSelf: 'center',
   },
 });

@@ -72,7 +72,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: 'black',
   },
   description: {
     width: '80%',
@@ -80,7 +80,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   player: {
-    marginTop: 40,
+    marginTop: 150,
+    borderColor: 'red',
+    borderWidth: 1,
+    borderRadius: 20,
   },
   state: {
     marginTop: 20,

@@ -4,7 +4,7 @@ import TrackPlayer, {
   usePlaybackState,
   useTrackPlayerEvents,
 } from 'react-native-track-player';
-
+import Icons from 'react-native-vector-icons/AntDesign';
 import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 function ProgressBar() {
@@ -16,7 +16,7 @@ function ProgressBar() {
       <View
         style={{
           flex: progress.duration - progress.position,
-          backgroundColor: 'grey',
+          backgroundColor: 'black',
         }}
       />
     </View>
@@ -49,13 +49,13 @@ export default function Player(props) {
 
   const {style, onNext, onPrevious, onTogglePlayback} = props;
 
-  var middleButtonText = 'Play';
+  var middleButtonText = <Icons name={'play'} size={30} />;
 
   if (
     playbackState === TrackPlayer.STATE_PLAYING ||
     playbackState === TrackPlayer.STATE_BUFFERING
   ) {
-    middleButtonText = 'Pause';
+    middleButtonText = <Icons name={'pause'} size={30} />;
   }
 
   return (
@@ -65,9 +65,15 @@ export default function Player(props) {
       <Text style={styles.title}>{trackTitle}</Text>
       <Text style={styles.artist}>{trackArtist}</Text>
       <View style={styles.controls}>
-        <ControlButton title={'<<'} onPress={onPrevious} />
+        <ControlButton
+          title={<Icons name={'stepbackward'} size={30} />}
+          onPress={onPrevious}
+        />
         <ControlButton title={middleButtonText} onPress={onTogglePlayback} />
-        <ControlButton title={'>>'} onPress={onNext} />
+        <ControlButton
+          title={<Icons name={'stepforward'} size={30} />}
+          onPress={onNext}
+        />
       </View>
     </View>
   );
@@ -86,8 +92,8 @@ const styles = StyleSheet.create({
     shadowOffset: {width: 0, height: 1},
   },
   cover: {
-    width: 140,
-    height: 140,
+    width: 240,
+    height: 240,
     marginTop: 20,
     backgroundColor: 'grey',
   },
