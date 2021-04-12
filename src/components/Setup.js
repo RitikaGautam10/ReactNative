@@ -35,6 +35,15 @@ class Setup extends Component {
           });
         }
       });
+    messaging().onMessage((remoteMessage) => {
+      console.log('OnMessage Title', remoteMessage.notification.title);
+      console.log('OnMessage Body', remoteMessage.notification.body);
+
+      this.setState({
+        message: remoteMessage.notification.body,
+        title: remoteMessage.notification.title,
+      });
+    });
   }
 
   render() {
