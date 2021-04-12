@@ -55,9 +55,6 @@ class GoogleSignIn extends Component {
         <SafeAreaView />
         <View style={styles.container}>
           <Text style={styles.txt}>Sign In With Google</Text>
-          {!this.state.login && (
-            <Text style={styles.txt}>You are currently logged out</Text>
-          )}
           {this.state.login ? (
             <View style={styles.first}>
               <Image
@@ -76,8 +73,9 @@ class GoogleSignIn extends Component {
             </View>
           ) : (
             <>
+              <Text style={styles.txt}>You are currently logged out</Text>
               <GoogleSigninButton
-                style={{width: 192, height: 48}}
+                style={styles.button}
                 size={GoogleSigninButton.Size.Wide}
                 color={GoogleSigninButton.Color.Dark}
                 onPress={this.signIn}
@@ -109,6 +107,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     color: 'blue',
     fontWeight: '500',
+  },
+  button: {
+    width: 200,
+    height: 50,
   },
 });
 export default GoogleSignIn;
