@@ -8,12 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* RRRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* RRRTests.m */; };
+		033194C8FD3E4397869F7895 /* Merriweather-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED7994FC7B2645AB845C092C /* Merriweather-Regular.ttf */; };
+		03A280D7787247CDA430B775 /* Dongle-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 602887777EFF4742A961128D /* Dongle-Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		1C9A5FA5C0A44E17B27FB9D9 /* Merriweather-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDD9AE65978141B3BA282625 /* Merriweather-Light.ttf */; };
+		5BA4C6CC88424845B2A7243D /* Merriweather-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FA2A6D3F156B42A0811B248F /* Merriweather-Bold.ttf */; };
 		6B7551A3C539ACD545AAA6C7 /* libPods-RRR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F940C9C8A16E6E83A1C4B97 /* libPods-RRR.a */; };
+		6C7C79B77A724D678A673375 /* Merriweather-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A900737C8F3C4E789BB8261E /* Merriweather-Black.ttf */; };
+		802F1F20773340ADAE9999E7 /* Dongle-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 962757E367DE4E25BD5C25E3 /* Dongle-Light.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		AA5760D0DD6044DBB616C113 /* Merriweather-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 509D4FC244304EB79BD73094 /* Merriweather-Italic.ttf */; };
+		B6545EA6F84E4C0D8213F11F /* Merriweather-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5F1DD677F3234144876F77CF /* Merriweather-BlackItalic.ttf */; };
 		C64B1BBB552B36EFA82856E6 /* libPods-RRR-RRRTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E603E8A9BCE40FB69D47A48 /* libPods-RRR-RRRTests.a */; };
+		CE2767296CC348FFBD1C5E0E /* Merriweather-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A60AF6D6F52D4FBDBB50272B /* Merriweather-LightItalic.ttf */; };
+		D9A44E37D78742FC989FC973 /* Merriweather-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E531D36D6942470AA67C26F5 /* Merriweather-BoldItalic.ttf */; };
+		DE98900CBBE045E5998ABA18 /* Dongle-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C3139D3A54641E5A6897272 /* Dongle-Bold.ttf */; };
+		F6C1EB55AA6D4B46A1CC7BCC /* Dancing.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33AC256209954CDC9CD8BE48 /* Dancing.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,12 +50,24 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = RRR/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = RRR/main.m; sourceTree = "<group>"; };
 		2E603E8A9BCE40FB69D47A48 /* libPods-RRR-RRRTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RRR-RRRTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33AC256209954CDC9CD8BE48 /* Dancing.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Dancing.ttf; path = ../src/assets/fonts/Dancing.ttf; sourceTree = "<group>"; };
 		498B3BEA9DA9AF97E8875AC4 /* Pods-RRR-RRRTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RRR-RRRTests.release.xcconfig"; path = "Target Support Files/Pods-RRR-RRRTests/Pods-RRR-RRRTests.release.xcconfig"; sourceTree = "<group>"; };
+		509D4FC244304EB79BD73094 /* Merriweather-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Italic.ttf"; path = "../src/assets/fonts/Merriweather-Italic.ttf"; sourceTree = "<group>"; };
+		5F1DD677F3234144876F77CF /* Merriweather-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-BlackItalic.ttf"; path = "../src/assets/fonts/Merriweather-BlackItalic.ttf"; sourceTree = "<group>"; };
 		5F940C9C8A16E6E83A1C4B97 /* libPods-RRR.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RRR.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		602887777EFF4742A961128D /* Dongle-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dongle-Regular.ttf"; path = "../src/assets/fonts/Dongle-Regular.ttf"; sourceTree = "<group>"; };
+		7C3139D3A54641E5A6897272 /* Dongle-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dongle-Bold.ttf"; path = "../src/assets/fonts/Dongle-Bold.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = RRR/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88F352422FB63EF2C2032489 /* Pods-RRR-RRRTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RRR-RRRTests.debug.xcconfig"; path = "Target Support Files/Pods-RRR-RRRTests/Pods-RRR-RRRTests.debug.xcconfig"; sourceTree = "<group>"; };
+		962757E367DE4E25BD5C25E3 /* Dongle-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Dongle-Light.ttf"; path = "../src/assets/fonts/Dongle-Light.ttf"; sourceTree = "<group>"; };
+		A60AF6D6F52D4FBDBB50272B /* Merriweather-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-LightItalic.ttf"; path = "../src/assets/fonts/Merriweather-LightItalic.ttf"; sourceTree = "<group>"; };
+		A900737C8F3C4E789BB8261E /* Merriweather-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Black.ttf"; path = "../src/assets/fonts/Merriweather-Black.ttf"; sourceTree = "<group>"; };
+		BDD9AE65978141B3BA282625 /* Merriweather-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Light.ttf"; path = "../src/assets/fonts/Merriweather-Light.ttf"; sourceTree = "<group>"; };
 		D47634D4B11511ACF368B335 /* Pods-RRR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RRR.release.xcconfig"; path = "Target Support Files/Pods-RRR/Pods-RRR.release.xcconfig"; sourceTree = "<group>"; };
+		E531D36D6942470AA67C26F5 /* Merriweather-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-BoldItalic.ttf"; path = "../src/assets/fonts/Merriweather-BoldItalic.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		ED7994FC7B2645AB845C092C /* Merriweather-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Regular.ttf"; path = "../src/assets/fonts/Merriweather-Regular.ttf"; sourceTree = "<group>"; };
+		FA2A6D3F156B42A0811B248F /* Merriweather-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Merriweather-Bold.ttf"; path = "../src/assets/fonts/Merriweather-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +146,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				8A78F2811775D5580AD9F875 /* Pods */,
+				8AA84CF58E7B4404B3B17C12 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +172,26 @@
 			);
 			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		8AA84CF58E7B4404B3B17C12 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33AC256209954CDC9CD8BE48 /* Dancing.ttf */,
+				7C3139D3A54641E5A6897272 /* Dongle-Bold.ttf */,
+				962757E367DE4E25BD5C25E3 /* Dongle-Light.ttf */,
+				602887777EFF4742A961128D /* Dongle-Regular.ttf */,
+				A900737C8F3C4E789BB8261E /* Merriweather-Black.ttf */,
+				5F1DD677F3234144876F77CF /* Merriweather-BlackItalic.ttf */,
+				FA2A6D3F156B42A0811B248F /* Merriweather-Bold.ttf */,
+				E531D36D6942470AA67C26F5 /* Merriweather-BoldItalic.ttf */,
+				509D4FC244304EB79BD73094 /* Merriweather-Italic.ttf */,
+				BDD9AE65978141B3BA282625 /* Merriweather-Light.ttf */,
+				A60AF6D6F52D4FBDBB50272B /* Merriweather-LightItalic.ttf */,
+				ED7994FC7B2645AB845C092C /* Merriweather-Regular.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +290,18 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				F6C1EB55AA6D4B46A1CC7BCC /* Dancing.ttf in Resources */,
+				DE98900CBBE045E5998ABA18 /* Dongle-Bold.ttf in Resources */,
+				802F1F20773340ADAE9999E7 /* Dongle-Light.ttf in Resources */,
+				03A280D7787247CDA430B775 /* Dongle-Regular.ttf in Resources */,
+				6C7C79B77A724D678A673375 /* Merriweather-Black.ttf in Resources */,
+				B6545EA6F84E4C0D8213F11F /* Merriweather-BlackItalic.ttf in Resources */,
+				5BA4C6CC88424845B2A7243D /* Merriweather-Bold.ttf in Resources */,
+				D9A44E37D78742FC989FC973 /* Merriweather-BoldItalic.ttf in Resources */,
+				AA5760D0DD6044DBB616C113 /* Merriweather-Italic.ttf in Resources */,
+				1C9A5FA5C0A44E17B27FB9D9 /* Merriweather-Light.ttf in Resources */,
+				CE2767296CC348FFBD1C5E0E /* Merriweather-LightItalic.ttf in Resources */,
+				033194C8FD3E4397869F7895 /* Merriweather-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
